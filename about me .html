@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LightADSLG</title>
+  <style>
+    /* Basic styling */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h1, p {
+      margin: 0.5em 0;
+    }
+
+    /* Snow effect styling */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      background-color: #fff;
+      opacity: 0.8;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LightADSLG</h1>
+    <p>Hello! My name is LightADSLG or NT/AUTHORITY I am a minecraft/roblox cheater and I also like to tinker with operating systems, I have no experience on any languages exept for the batch language .bat for short</p>
+    <p>Youtube Channel @NET-AUTHORITY</p>
+  </div>
+
+  <!-- Snow Effect Script -->
+  <script>
+    const snowflakeCount = 100;
+
+    function createSnowflake() {
+      const snowflake = document.createElement("div");
+      snowflake.classList.add("snowflake");
+      document.body.appendChild(snowflake);
+
+      // Random positioning and animation duration
+      snowflake.style.left = `${Math.random() * 100}vw`;
+      snowflake.style.width = `${Math.random() * 5 + 2}px`;
+      snowflake.style.height = snowflake.style.width;
+      snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      snowflake.style.opacity = Math.random();
+
+      // Remove snowflake after it falls
+      snowflake.addEventListener("animationend", () => snowflake.remove());
+    }
+
+    setInterval(createSnowflake, 100);
+  </script>
+</body>
+</html>
